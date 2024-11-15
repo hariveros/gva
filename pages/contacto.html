@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Virtual de Arte</title>
+    <link rel="stylesheet" href="../css/gva.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <video autoplay muted loop class="video-fondo">
+        <source src="../assets/videos/nubes.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./artistas.html">Artistas</a></li>
+                <li><a href="../index.html"><img src="../assets/img/logo.jpg" alt="Logo"></a></li>
+                <li><a href="./galeria.html">Galería</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+              </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <form>
+            <h2>CONTACTO</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer>
+        <img src="../assets/img/logo.JPG" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./artistas.html">Artistas</a></li>
+                <li><a href="./galeria.html">Galería</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li><a href="#">Cuadros Populares</a></li>
+                <li><a href="#"></a>Blog</li>
+                <li><a href="#"">Foro</a></li>
+                <li><a href="#">Acerca de nosotros</a></li>
+                <li><a href="#">Preguntas Frecuentes</a></li>
+            </ul>
+        </nav>        
+        <section class="redes">
+            <h3>Redes Sociales</h3>
+            <a href="https://www.facebook.com/GaleriaVirtualdeArte" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+            <a href="https://www.instagram.com/galeriavirtualdearte/" target="_blank"><i class="fa fa-instagram fa-2x" style="border-radius: 10px;background-color: red; color: white;"></i></a>
+            <a href="https://www.twitter.com/GaleriaVirtualdeArte" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+            <a href="https://www.youtube.com/channel/UCn0v4j4rQ588hW6625n09Rg" target="_blank"><i class="fa fa-youtube fa-2x" style="background-color: white; color: red;"></i></a>
+        </section>
+    </footer>
+</body>
+
+</html>
