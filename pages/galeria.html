@@ -5,23 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería Virtual de Arte</title>
     <link rel="stylesheet" href="../css/gva.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./artistas.html">Artistas</a></li>
                 <li><a href="../index.html"><img src="../assets/img/logo.jpg" alt="Logo"></a></li>
-                <li><a href="./galeria.html">Galería</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-              </ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../pages/artistas.html">Artistas</a></li>
+                <li><a href="../pages/galeria.html">Galería</a></li>
+                <li><a href="../pages/contacto.html">Contacto</a></li>
+                <li><a href="../pages/carrito.html"><i class="fa fa-shopping-cart fa-2x"></i></a></li>
+            </ul>
         </nav>
     </header>
     
     <main>
-        <h2>Galería Virtual de Arte</h2>
+        <h1>Galería</h1>
+        <p class="intro"> Explora nuestra exclusiva colección de obras de arte. Aquí podrás encontrar y adquirir el cuadro que desees, con la seguridad de que cada pieza ha sido cuidadosamente seleccionada por su calidad y belleza. ¡Disfruta de la experiencia de comprar arte desde la comodidad de tu hogar!
         <section class="galeria">    
             <!-- Aquí se cargan las imágenes y el texto de cada artista -->
             <div class="cuadro">
@@ -30,7 +32,7 @@
                 <p class="artista"> Autor: Mark Hill</p>
                 <p class="precio">$ 150.000</p>
                 <p class="tecnica">Oleo</p>
-                <button>Agregar al carrito</button>
+                <button onclick="agregarCarrito('Solitario', 150000)">Agregar al carrito</button>
             </div>
             <div class="cuadro">
                 <img src="../assets/img/pinturas/atardecer.png" alt="Imagen 1">
@@ -38,7 +40,7 @@
                 <p class="artista"> Autor: Jorge Alvarez</p>
                 <p class="precio">$ 135.000</p>
                 <p class="tecnica">Acuarela</p>
-                <button>Agregar al carrito</button>
+                <button onclick="agregarCarrito('Atardecer', 135000)">Agregar al carrito</button>
             </div>
             <div class="cuadro">
                 <img src="../assets/img/pinturas/Calle.png" alt="Imagen 1">
@@ -46,7 +48,7 @@
                 <p class="artista"> Autor: Jorge Alvarez</p>
                 <p class="precio">$ 235.000</p>
                 <p class="tecnica">Acrílico</p>
-                <button>Agregar al carrito</button>
+                <button onclick="agregarCarrito('Calle', 235000)">Agregar al carrito</button>
             </div>
             <div class="cuadro">
                 <img src="../assets/img/pinturas/casasylago.png" alt="Imagen 1">
@@ -54,7 +56,7 @@
                 <p class="artista"> Autor: Victor Krinsky</p>
                 <p class="precio">$ 170.000</p>
                 <p class="tecnica">Acrílico</p>
-                <button>Agregar al carrito</button>
+                <button onclick="agregarCarrito('Mi sueño', 170000)">Agregar al carrito</button>
             </div>
             <div class="cuadro">
                 <img src="../assets/img/pinturas/mi casa.png" alt="Imagen 1">
@@ -62,7 +64,7 @@
                 <p class="artista"> Autor: Anselmo Martin</p>
                 <p class="precio">$ 195.000</p>
                 <p class="tecnica">Acrílico</p>
-                <button>Agregar al carrito</button>
+                <button onclick="agregarCarrito('Mi casa', 195000)">Agregar al carrito</button>
             </div>
             <div class="cuadro">
                 <img src="../assets/img/pinturas/noria.png" alt="Imagen 1">
@@ -70,7 +72,7 @@
                 <p class="artista"> Autor: Victor Krinsky</p>
                 <p class="precio">$ 170.000</p>
                 <p class="tecnica">Oleo</p>
-                <button>Agregar al carrito</button>
+                <button onclick="agregarCarrito('La Noria', 170000)">Agregar al carrito</button>
             </div>
             <div class="cuadro">
                 <img src="../assets/img/pinturas/nubes.png" alt="Imagen 1">
@@ -78,7 +80,7 @@
                 <p class="artista"> Autor: Mark Hill</p>
                 <p class="precio">$ 150.000</p>
                 <p class="tecnica">Oleo</p>
-                <button>Agregar al carrito</button>
+                <button onclick="agregarCarrito('Tormentoso', 150000)">Agregar al carrito</button>
             </div>
             <div class="cuadro">
                 <img src="../assets/img/pinturas/olas.png" alt="Imagen 1">
@@ -86,38 +88,57 @@
                 <p class="artista"> Autor: Victor Krinsky</p>
                 <p class="precio">$ 180.000</p>
                 <p class="tecnica">Oleo</p>
-                <button>Agregar al carrito</button>
+                <button onclick="agregarCarrito('El Océano', 180000)">Agregar al carrito</button>
             </div>
         </section>
     </main>
 
     <footer>
-        <img src="../assets/img/logo.JPG" alt="Logo">
+        <a href="./index.html"><img src="../assets/img/logo.jpg" alt="Logo"></a>
+        <section class="datos">
+            Carlos Calvo 1823 - Local 6<br>
+            CABA, Buenos Aires, Argentina<br>
+            Código Postal 1000<br>
+            Teléfono: (11) 4561-7890<br>
+            Email:  contacto@galeriavirtualdearte.com</p>
+            <p>Todos los derechos reservados © 2024</p>
+        </section>
         <nav>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./artistas.html">Artistas</a></li>
-                <li><a href="./galeria.html">Galería</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="../pages/artistas.html">Artistas</a></li>
+                <li><a href="../pages/galeria.html">Galería</a></li>
+                <li><a href="../pages/contacto.html">Contacto</a></li>
             </ul>
         </nav>
         <nav>
             <ul>
                 <li><a href="#">Cuadros Populares</a></li>
                 <li><a href="#"></a>Blog</li>
-                <li><a href="#"">Foro</a></li>
+                <li><a href="#">Foro</a></li>
                 <li><a href="#">Acerca de nosotros</a></li>
                 <li><a href="#">Preguntas Frecuentes</a></li>
             </ul>
         </nav>        
         <section class="redes">
             <h3>Redes Sociales</h3>
-            <a href="https://www.facebook.com/GaleriaVirtualdeArte" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
-            <a href="https://www.instagram.com/galeriavirtualdearte/" target="_blank"><i class="fa fa-instagram fa-2x" style="border-radius: 10px;background-color: red; color: white;"></i></a>
-            <a href="https://www.twitter.com/GaleriaVirtualdeArte" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
-            <a href="https://www.youtube.com/channel/UCn0v4j4rQ588hW6625n09Rg" target="_blank"><i class="fa fa-youtube fa-2x" style="background-color: white; color: red;"></i></a>
+            <div class="listaredes">
+                <a href="https://www.facebook.com/GaleriaVirtualdeArte" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/galeriavirtualdearte/" target="_blank"><i class="fab fa-instagram" style="border-radius: 10px;background-color: red; color: white;"></i></a>
+                <a href="https://www.twitter.com/GaleriaVirtualdeArte" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UCn0v4j4rQ588hW6625n09Rg" target="_blank"><i class="fab fa-youtube" style="background-color: white; color: red;"></i></a>
+                </div>
         </section>
     </footer>
+
+    <script>
+        function agregarCarrito(nombre, precio) {
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            carrito.push({ nombre, precio });
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+            alert(`${nombre} se ha agregado al carrito.`);
+        }
+    </script>
 </body>
 
 </html>
